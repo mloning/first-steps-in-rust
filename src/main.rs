@@ -1,19 +1,27 @@
-use core::num;
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
 
 fn main() {
+    // intro message
     println!("Hi! Let's play a guessing game.");
-    let number = rand::thread_rng().gen_range(1..=100);
+
+    // generate secret number
+    let min: u32 = 1;
+    let max: u32 = 100;
+    let number: u32 = rand::thread_rng().gen_range(min..=max);
     println!("The secret number is: {number}");
 
-    println!("Guess the number between 0 and 100!");
+    // repeat until game is over
+    println!("Guess the number between {min} and {max}!");
     loop {
-        let mut guess = String::new();
+        // take user input
+        let mut guess: String = String::new();
         io::stdin()
             .read_line(&mut guess)
             .expect("Failed to read line");
+
+        // handle invalid input
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => {
@@ -21,8 +29,8 @@ fn main() {
                 continue;
             }
         };
-        println!("You guessed: {guess}");
 
+        // check input against secret number
         match guess.cmp(&number) {
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),

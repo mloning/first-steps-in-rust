@@ -4,6 +4,10 @@
 
 Follow the [offical docs](https://doc.rust-lang.org/book/ch01-01-installation.html).
 
+## Resources
+
+* [A half-hour to learn Rust](https://fasterthanli.me/articles/a-half-hour-to-learn-rust)
+
 ## Setup
 
 For initial project setup, follow [these steps](https://doc.rust-lang.org/cargo/guide/creating-a-new-project.html) using cargo.
