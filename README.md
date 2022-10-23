@@ -1,26 +1,31 @@
 # First steps in Rust
 
-## Install Rust
+My solutions for the tutorials in the [Rust Book](https://doc.rust-lang.org/book/).
 
-Follow the [offical docs](https://doc.rust-lang.org/book/ch01-01-installation.html).
-
-## Mini-projects
+## Tutorials
 
 * [guessing game](https://doc.rust-lang.org/book/ch02-00-guessing-game-tutorial.html)
 * [minigrep](https://doc.rust-lang.org/book/ch12-00-an-io-project.html)
+* [webserver](https://doc.rust-lang.org/book/ch20-00-final-project-a-web-server.html)
 
-## Standard development workflow
+## Standard dev workflow
 
-For initial project setup, follow [these steps](https://doc.rust-lang.org/cargo/guide/creating-a-new-project.html) using cargo.
+Set up a new project:
 
 ```bash
-cargo new first_steps_in_rust --bin
+cargo new <project-name> 
 ```
 
-To compile and run project, run:
+Compile and run a project from inside the root folder:
 
 ```bash
 cargo run
+```
+
+Run tests:
+
+```bash
+cargo test
 ```
 
 ## Extra resources
