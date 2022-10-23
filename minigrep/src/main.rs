@@ -4,11 +4,7 @@ use std::process;
 
 fn main() {
     // collect command-line arguments
-    let args: Vec<String> = env::args().collect();
-    dbg!(&args);
-
-    // extract arguments
-    let config = Config::build(&args).unwrap_or_else(|err| {
+    let config = Config::build(env::args()).unwrap_or_else(|err| {
         eprintln!("Parsing command-line arguments failed: {err}");
         process::exit(1);
     });
