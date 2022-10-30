@@ -8,7 +8,7 @@ My solutions for the tutorials in the [Rust Book](https://doc.rust-lang.org/book
 * [minigrep](https://doc.rust-lang.org/book/ch12-00-an-io-project.html)
 * [webserver](https://doc.rust-lang.org/book/ch20-00-final-project-a-web-server.html)
 
-## Standard dev workflow
+## Dev workflow
 
 Set up a new project:
 
@@ -16,16 +16,22 @@ Set up a new project:
 cargo new <project-name> 
 ```
 
-Compile and run a project from inside the root folder:
+Compile and run a project:
 
 ```bash
 cargo run
 ```
 
-Run tests:
+Run unit tests:
 
 ```bash
 cargo test
+```
+
+Generate and open docs:
+
+```bash
+cargo doc --open
 ```
 
 ## Extra resources
